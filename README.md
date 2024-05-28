@@ -7,11 +7,11 @@ Documentação do sistema (DDD) com Event Storming.
 
 # Sistema de Pedidos FastFood
 
-Este é um sistema de pedidos de comida rápida desenvolvido em ASP.NET Core utilizando arquitetura hexagonal. O sistema permite aos usuários realizar pedidos de produtos de diferentes categorias (Lanche, Acompanhamento, Bebida, Sobremesa), acompanhar o status dos pedidos e realizar pagamentos.
+Este é um sistema de pedidos de comida rápida desenvolvido em .NET8 utilizando arquitetura hexagonal. O sistema permite aos usuários realizar pedidos de produtos de diferentes categorias (Lanche, Acompanhamento, Bebida, Sobremesa), acompanhar o status dos pedidos e realizar pagamentos.
 
 ## Funcionalidades
 
-  **Cliente:**
+- **Clientes:**
   - Cadastro do Cliente.
   - Identificação do Cliente via CPF.
 
@@ -30,7 +30,7 @@ Este é um sistema de pedidos de comida rápida desenvolvido em ASP.NET Core uti
 
 ## Tecnologias Utilizadas
 
-- **ASP.NET Core 8:** Framework para o desenvolvimento da aplicação web.
+- **NET 8:**
 - **Entity Framework Core:** Mapeamento objeto-relacional para o banco de dados SQL Server.
 - **Docker:** Containerização da aplicação e do banco de dados para facilitar o deployment.
 - **Swagger:** Documentação da API para facilitar o desenvolvimento e o teste.
@@ -41,6 +41,15 @@ Este é um sistema de pedidos de comida rápida desenvolvido em ASP.NET Core uti
    docker-compose up 
 
 2. Acesse a aplicação em `http://localhost:8080/swagger/index.html`.
+
+## Fluxo
+
+1. Criar Cliente (cpf: apenas numeros)
+2. Criar Categoria
+3. Criar Produto
+4. Criar Pedido
+5. Mudar Status Pagamento
+6. Mudar Status do Pedido
 
 ## Licença
 Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para obter mais detalhes.

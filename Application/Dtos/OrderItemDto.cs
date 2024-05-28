@@ -9,6 +9,7 @@
     public class CreateOrderDto
     {
         public List<OrderItemDto> Items { get; set; }
+        public int ClientId { get; set; }
     }
 
     public class ResponseOrderDto

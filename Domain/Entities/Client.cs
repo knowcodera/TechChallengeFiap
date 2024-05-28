@@ -26,5 +26,7 @@ namespace Domain.Entities
 
         [DisplayName("E-mail")]
         public string Email { get; private set; }
+
+        public ICollection<Order> Orders { get; set; } = new List<Order>();
     }
 }

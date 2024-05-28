@@ -27,6 +27,7 @@ namespace Application.Services
             {
                 CreatedAt = DateTime.UtcNow,
                 Status = OrderStatus.Recebido,
+                ClientId = createOrderDto.ClientId,
                 Items = _mapper.Map<List<OrderItem>>(createOrderDto.Items)
             };
 
