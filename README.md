@@ -45,7 +45,7 @@ Este é um sistema de pedidos de comida rápida desenvolvido em .NET8 utilizando
 
 ## Fluxo
 
-1. Criar Cliente (cpf: apenas numeros)
+1. Criar Cliente (cpf: apenas numeros **ClientController**
 ```/v1/Client/client``` 
  ```json
    {
@@ -54,14 +54,14 @@ Este é um sistema de pedidos de comida rápida desenvolvido em .NET8 utilizando
       "email": "Halro@email.com"
    }
 ```
-2. Criar Categoria
+2. Criar Categoria **CategoryController**
 ```/v1/category``` 
  ```json
     {
       "name": "Lanche"
     }
 ```
-3. Criar Produto
+3. Criar Produto **ProductController**
 ```/v1/product``` 
  ```json
     {
@@ -70,12 +70,12 @@ Este é um sistema de pedidos de comida rápida desenvolvido em .NET8 utilizando
       "categoryId": 1
     }
 ```
-4. Listar produtos por categoria
+4. Listar produtos por categoria **CategoryController**
 ```/v1/Category/1``` 
  ```
    1    
  ```
-5. Criar Pedido
+5. Criar Pedido **OrderController**
 ```/v1/Order``` 
  ```json
     {
@@ -88,17 +88,21 @@ Este é um sistema de pedidos de comida rápida desenvolvido em .NET8 utilizando
       "clientId": 1
     }
 ```
-6. Mudar Status Pagamento (pago = 2) e Pedido vai para (EmPreparacao)
+6. Mudar Status Pagamento (pago = 2) e Pedido vai para (EmPreparacao) **PaymentController**
 ```/v1/Payment/1``` 
 ```json
     2
 ```
 
-7. Mudar Status do Pedido para Pronto e Finalizado
+7. Mudar Status do Pedido para Pronto e Finalizado **OrderController**
 ```/v1/Order/1/status``` 
 ```json
     4
 ```
+8. Listar Pedidos **OrderController**
+```/v1/Order``` 
+
+
 
 ## Licença
 Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para obter mais detalhes.
