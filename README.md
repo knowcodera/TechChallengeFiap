@@ -45,6 +45,8 @@ Este é um sistema de pedidos de comida rápida desenvolvido em .NET8 utilizando
 
 ## Fluxo
 
+O sistema inicia com uma base de dados inicialmente preenchida.
+
 1. Criar Cliente (cpf: apenas numeros **ClientController**
 ```/v1/Client/client``` 
  ```json
