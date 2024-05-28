@@ -20,8 +20,7 @@ var user = builder.Configuration["DBUser"] ?? "SA";
 var password = builder.Configuration["DBPassword"] ?? "PA55w0rd2024";
 var database = builder.Configuration["Database"] ?? "Fiap";
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-          options.UseSqlServer($"Data Source=DESKTOP-LBFK9NU;Database=fiap;Integrated Security=True;Trust Server Certificate=True"));
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer($"Server={server},{port};Initial Catalog={database};User ID={user};Password={password};TrustServerCertificate=true"));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
