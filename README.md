@@ -48,8 +48,8 @@ Este é um sistema de pedidos de comida rápida desenvolvido em .NET8 utilizando
 2. Criar Categoria
 3. Criar Produto
 4. Criar Pedido
-5. Mudar Status Pagamento
-6. Mudar Status do Pedido
+6. Mudar Status Pagamento (pago = 2) e Pedido vai para (EmPreparacao)
+7. Mudar Status do Pedido para Pronto e Finalizado
 
 ## Licença
 Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para obter mais detalhes.

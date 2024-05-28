@@ -36,9 +36,6 @@ namespace Application.Services
             _paymentRepository.Add(payment);
             _paymentRepository.SaveChanges();
 
-            payment.Status = PaymentStatus.Pago;
-            _paymentRepository.Update(payment);
-            _paymentRepository.SaveChanges();
 
             return _mapper.Map<ResponsePaymentDto>(payment);
         }

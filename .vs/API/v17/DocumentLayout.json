@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Projetos\\TechChallengeFiap\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{648EF86C-02A6-468A-AE15-3D90E85017CD}|API\\API.csproj|c:\\projetos\\techchallengefiap\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{648EF86C-02A6-468A-AE15-3D90E85017CD}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4586E702-8881-4C34-A993-2C5008604FB7}|Application\\Application.csproj|c:\\projetos\\techchallengefiap\\application\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4586E702-8881-4C34-A993-2C5008604FB7}|Application\\Application.csproj|solutionrelative:application\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Projetos\\TechChallengeFiap\\Infra\\Migrations\\20240528030508_AjusteDeColunaDePedidoeClient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infra\\Migrations\\20240528030508_AjusteDeColunaDePedidoeClient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4586E702-8881-4C34-A993-2C5008604FB7}|Application\\Application.csproj|c:\\projetos\\techchallengefiap\\application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4586E702-8881-4C34-A993-2C5008604FB7}|Application\\Application.csproj|solutionrelative:application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36C55E36-5DAE-46AC-BAA4-57B64D6AED11}|Domain\\Domain.csproj|c:\\projetos\\techchallengefiap\\domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36C55E36-5DAE-46AC-BAA4-57B64D6AED11}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{648EF86C-02A6-468A-AE15-3D90E85017CD}|API\\API.csproj|c:\\projetos\\techchallengefiap\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{648EF86C-02A6-468A-AE15-3D90E85017CD}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4586E702-8881-4C34-A993-2C5008604FB7}|Application\\Application.csproj|c:\\projetos\\techchallengefiap\\application\\mappings\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,16 +27,12 @@
       "RelativeMoniker": "D:0:0:{36C55E36-5DAE-46AC-BAA4-57B64D6AED11}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36C55E36-5DAE-46AC-BAA4-57B64D6AED11}|Domain\\Domain.csproj|c:\\projetos\\techchallengefiap\\domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36C55E36-5DAE-46AC-BAA4-57B64D6AED11}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4586E702-8881-4C34-A993-2C5008604FB7}|Application\\Application.csproj|c:\\projetos\\techchallengefiap\\application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4586E702-8881-4C34-A993-2C5008604FB7}|Application\\Application.csproj|solutionrelative:application\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4586E702-8881-4C34-A993-2C5008604FB7}|Application\\Application.csproj|c:\\projetos\\techchallengefiap\\application\\dtos\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4586E702-8881-4C34-A993-2C5008604FB7}|Application\\Application.csproj|solutionrelative:application\\dtos\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93E26653-71E7-4CD3-9EDD-A46ED0DEB367}|Infra\\Infra.csproj|c:\\projetos\\techchallengefiap\\infra\\migrations\\20240528030508_ajustedecolunadepedidoeclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93E26653-71E7-4CD3-9EDD-A46ED0DEB367}|Infra\\Infra.csproj|solutionrelative:infra\\migrations\\20240528030508_ajustedecolunadepedidoeclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,19 +47,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\Projetos\\TechChallengeFiap\\Application\\Services\\PaymentService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\PaymentService.cs",
+              "ToolTip": "C:\\Projetos\\TechChallengeFiap\\Application\\Services\\PaymentService.cs",
+              "RelativeToolTip": "Application\\Services\\PaymentService.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAUwCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T03:20:08.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Projetos\\TechChallengeFiap\\API\\Program.cs",
               "RelativeDocumentMoniker": "API\\Program.cs",
               "ToolTip": "C:\\Projetos\\TechChallengeFiap\\API\\Program.cs",
               "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAACVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-28T03:05:48.927Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "20240528030508_AjusteDeColunaDePedidoeClient.cs",
               "DocumentMoniker": "C:\\Projetos\\TechChallengeFiap\\Infra\\Migrations\\20240528030508_AjusteDeColunaDePedidoeClient.cs",
               "RelativeDocumentMoniker": "Infra\\Migrations\\20240528030508_AjusteDeColunaDePedidoeClient.cs",
@@ -63,12 +80,11 @@
               "RelativeToolTip": "Infra\\Migrations\\20240528030508_AjusteDeColunaDePedidoeClient.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T03:05:09.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T03:05:09.059Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AutoMapperProfile.cs",
               "DocumentMoniker": "C:\\Projetos\\TechChallengeFiap\\Application\\Mappings\\AutoMapperProfile.cs",
               "RelativeDocumentMoniker": "Application\\Mappings\\AutoMapperProfile.cs",
@@ -76,8 +92,7 @@
               "RelativeToolTip": "Application\\Mappings\\AutoMapperProfile.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAgwAAAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T03:03:50.57Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T03:03:50.57Z"
             },
             {
               "$type": "Document",
@@ -89,25 +104,24 @@
               "RelativeToolTip": "Application\\Dtos\\OrderItemDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T03:01:46.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T03:01:46.051Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "OrderService.cs",
               "DocumentMoniker": "C:\\Projetos\\TechChallengeFiap\\Application\\Services\\OrderService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\OrderService.cs",
               "ToolTip": "C:\\Projetos\\TechChallengeFiap\\Application\\Services\\OrderService.cs",
               "RelativeToolTip": "Application\\Services\\OrderService.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAA1wCEAAAAoAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwC8AAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-28T03:00:29.464Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Projetos\\TechChallengeFiap\\Domain\\Entities\\Order.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Order.cs",
@@ -120,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Client.cs",
               "DocumentMoniker": "C:\\Projetos\\TechChallengeFiap\\Domain\\Entities\\Client.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Client.cs",
@@ -128,8 +142,7 @@
               "RelativeToolTip": "Domain\\Entities\\Client.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T02:57:02.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T02:57:02.547Z"
             }
           ]
         }
