@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers
 {
     [ApiController]
-    [Route("v1")]
+    [Route("v1/[controller]")]
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
@@ -16,15 +16,13 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        [Route("product")]
         public async Task<IActionResult> GetAllAsync()
         {
             var Products = await _productService.GetAllAsync();
             return Ok(Products);
         }
 
-        [HttpGet]
-        [Route("product/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetByIdAsync(int id)
         {
             var Product = await _productService.GetByIdAsync(id);
@@ -35,7 +33,7 @@ namespace API.Controllers
             return Ok(Product);
         }
 
-        [HttpPost("product")]
+        [HttpPost]
         public async Task<IActionResult> CreateAsync([FromBody] RequestProductDto dto)
         {
             if (!ModelState.IsValid)
@@ -46,7 +44,7 @@ namespace API.Controllers
             return Ok(product);
         }
 
-        [HttpPut("product/{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody] RequestProductDto dto)
         {
             var product = await _productService.UpdateProduct(id, dto);
@@ -57,7 +55,7 @@ namespace API.Controllers
             return Ok(product);
         }
 
-        [HttpDelete("product/{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             await _productService.DeleteProduct(id);

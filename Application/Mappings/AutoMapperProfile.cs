@@ -14,8 +14,7 @@ namespace Application.Mappings
             CreateMap<Category, ResponseCategoryDto>()
                .ForMember(dest => dest.Products, opt => opt.MapFrom(src => src.Products));
 
-            CreateMap<Product, ResponseProductDto>()
-               .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.Category.Name));
+            CreateMap<Product, ResponseProductDto>();
 
 
             CreateMap<Payment, ResponsePaymentDto>()

@@ -31,12 +31,17 @@ namespace Infra.Repositories
 
         public Order GetById(int id)
         {
-            return _context.Orders.Include(o => o.Items).ThenInclude(i => i.Product).FirstOrDefault(o => o.Id == id);
+            return _context.Orders
+                .Include(o => o.Items).ThenInclude(i => i.Product)
+                .Include(o => o.Payments)
+                .FirstOrDefault(o => o.Id == id);
         }
 
         public IEnumerable<Order> GetAll()
         {
-            return _context.Orders.Include(o => o.Items).ThenInclude(i => i.Product).ToList();
+            return _context.Orders
+                .Include(o => o.Items).ThenInclude(i => i.Product)
+                .Include(o => o.Payments).ToList();
         }
 
         public void SaveChanges()

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers
 {
     [ApiController]
-    [Route("v1")]
+    [Route("v1/[controller]")]
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryService _categoryService;
@@ -17,15 +17,13 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        [Route("category")]
         public async Task<IActionResult> GetAllAsync()
         {
             var categories = await _categoryService.GetAllAsync();
             return Ok(categories);
         }
 
-        [HttpGet]
-        [Route("category/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetByIdAsync(int id)
         {
             var category = await _categoryService.GetByIdAsync(id);
@@ -36,7 +34,7 @@ namespace API.Controllers
             return Ok(category);
         }
 
-        [HttpPost("category")]
+        [HttpPost]
         public async Task<IActionResult> CreateAsync([FromBody] RequestCategoryDto dto)
         {
             if (!ModelState.IsValid)

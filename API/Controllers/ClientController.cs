@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers
 {
     [ApiController]
-    [Route("v1")]
+    [Route("v1/[controller]")]
     public class ClientController : ControllerBase
     {
         private readonly IClientService _clientService;
@@ -16,15 +16,13 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        [Route("client")]
         public async Task<IActionResult> GetAllAsync()
         {
             var clients = await _clientService.GetAllAsync();
             return Ok(clients);
         }
 
-        [HttpGet]
-        [Route("client/{cpf}")]
+        [HttpGet("{cpf}")]
         public async Task<IActionResult> GetByCpfAsync(string cpf)
         {
             var client = await _clientService.GetByCpfAsync(cpf);

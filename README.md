@@ -42,14 +42,63 @@ Este é um sistema de pedidos de comida rápida desenvolvido em .NET8 utilizando
 
 2. Acesse a aplicação em `http://localhost:8080/swagger/index.html`.
 
+
 ## Fluxo
 
 1. Criar Cliente (cpf: apenas numeros)
+```/v1/Client/client``` 
+ ```json
+   {
+      "name": "Halro",
+      "cpf": "56954409049",
+      "email": "Halro@email.com"
+   }
+```
 2. Criar Categoria
+```/v1/category``` 
+ ```json
+    {
+      "name": "Lanche"
+    }
+```
 3. Criar Produto
-4. Criar Pedido
+```/v1/product``` 
+ ```json
+    {
+      "name": "Hambúrguer",
+      "price": 10,
+      "categoryId": 1
+    }
+```
+4. Listar produtos por categoria
+```/v1/Category/1``` 
+ ```
+   1    
+ ```
+5. Criar Pedido
+```/v1/Order``` 
+ ```json
+    {
+      "items": [
+        {
+          "productId": 1,
+          "quantity": 2
+        }
+      ],
+      "clientId": 1
+    }
+```
 6. Mudar Status Pagamento (pago = 2) e Pedido vai para (EmPreparacao)
+```/v1/Payment/1``` 
+```json
+    2
+```
+
 7. Mudar Status do Pedido para Pronto e Finalizado
+```/v1/Order/1/status``` 
+```json
+    4
+```
 
 ## Licença
 Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para obter mais detalhes.
