@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+  apipayment: 
+    image: payment:dev
+    container_name: apipayment
+    build:
+      context: .
+      dockerfile: PaymentWebhook/Dockerfile
+    ports:
+      - "8480:8480"
+      - "8481:8481"
+    networks:
+      - backend  
+
+networks:
+  backend:
+    driver: bridge

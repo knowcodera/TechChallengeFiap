@@ -1,4 +1,15 @@
 
+to-do
+
+rodar primeiros os k8s de banco e depois da api
+
+como rodar
+
+
+
+
+
+
 # Documentação
 
 Documentação do sistema (DDD) com Event Storming.

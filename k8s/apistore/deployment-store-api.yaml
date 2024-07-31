@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+      - name: api
+        image: store:dev
+        env:
+        - name: DBServer
+          value: sqlserver
+        - name: DBPort
+          value: "1433"
+        - name: DBUser
+          value: SA
+        - name: DBPassword
+          value: PA55w0rd2024
+        - name: Database
+          value: Fiap
+        ports:
+        - containerPort: 8080
+        - containerPort: 8081

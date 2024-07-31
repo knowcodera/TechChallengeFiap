@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apipayment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: apipayment
+  template:
+    metadata:
+      labels:
+        app: apipayment
+    spec:
+      containers:
+      - name: apipayment
+        image: payment:dev
+        ports:
+        - containerPort: 8480
+        - containerPort: 8481
