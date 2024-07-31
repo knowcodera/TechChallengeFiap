@@ -45,10 +45,16 @@ Esboço
 
 ## Configuração e Uso
 
-1. Execute o Docker Compose para construir as imagens e iniciar os contêineres:
-   docker-compose up 
+1. Execute os scripts do k8s
+- kubectl apply -f deployment-store-db.yaml
+- kubectl apply -f svc-store-db.yaml
+- kubectl apply -f deployment-store-api.yaml
+- kubectl apply -f svc-store-api.yaml
+- kubectl apply -f deployment-store-apipayment.yaml
+- kubectl apply -f svc-store-apipayment.yaml
 
-2. Acesse a aplicação em `http://localhost:8080/swagger/index.html`.
+2. Acesse a aplicação Store em `http://localhost:8080/swagger/index.html`.
+3. Acesse a aplicação Payment em `http://localhost:8480/swagger/index.html`.
 
 
 ## Fluxo
