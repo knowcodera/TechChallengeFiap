@@ -1,15 +1,3 @@
-
-to-do
-
-rodar primeiros os k8s de banco e depois da api
-
-como rodar
-
-
-
-
-
-
 # Documentação
 
 Documentação do sistema (DDD) com Event Storming.
@@ -19,6 +7,15 @@ Documentação do sistema (DDD) com Event Storming.
 # Sistema de Pedidos FastFood
 
 Este é um sistema de pedidos de comida rápida desenvolvido em .NET8 utilizando arquitetura hexagonal. O sistema permite aos usuários realizar pedidos de produtos de diferentes categorias (Lanche, Acompanhamento, Bebida, Sobremesa), acompanhar o status dos pedidos e realizar pagamentos.
+
+
+## Diagrama
+
+Esboço
+![Diagrama](https://github.com/user-attachments/assets/ae1f91fa-a3f2-42ea-a0db-ac90d75fb60f)
+
+## Video
+
 
 ## Funcionalidades
 
@@ -113,7 +110,9 @@ O sistema inicia com uma base de dados inicialmente preenchida.
     4
 ```
 8. Listar Pedidos **OrderController**
-```/v1/Order``` 
+```/v1/Order```
+
+
 
 
 
