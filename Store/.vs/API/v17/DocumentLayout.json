@@ -1,22 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Projetos\\TechChallengeFiap\\Store\\",
+  "WorkspaceRootPath": "C:\\Projetos\\TechChallengeFiap\\store\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93E26653-71E7-4CD3-9EDD-A46ED0DEB367}|Infra\\Infra.csproj|c:\\projetos\\techchallengefiap\\store\\infra\\prepdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93E26653-71E7-4CD3-9EDD-A46ED0DEB367}|Infra\\Infra.csproj|solutionrelative:infra\\prepdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4586E702-8881-4C34-A993-2C5008604FB7}|Application\\Application.csproj|c:\\projetos\\techchallengefiap\\store\\application\\usecases\\paymentusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4586E702-8881-4C34-A993-2C5008604FB7}|Application\\Application.csproj|solutionrelative:application\\usecases\\paymentusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4586E702-8881-4C34-A993-2C5008604FB7}|Application\\Application.csproj|c:\\projetos\\techchallengefiap\\store\\application\\usecases\\orderusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4586E702-8881-4C34-A993-2C5008604FB7}|Application\\Application.csproj|solutionrelative:application\\usecases\\orderusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{648EF86C-02A6-468A-AE15-3D90E85017CD}|API\\API.csproj|c:\\projetos\\techchallengefiap\\store\\api\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{648EF86C-02A6-468A-AE15-3D90E85017CD}|API\\API.csproj|solutionrelative:api\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4586E702-8881-4C34-A993-2C5008604FB7}|src\\Application\\Application.csproj|c:\\projetos\\techchallengefiap\\store\\src\\application\\usecases\\orderusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4586E702-8881-4C34-A993-2C5008604FB7}|src\\Application\\Application.csproj|solutionrelative:src\\application\\usecases\\orderusecase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,53 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PrepDB.cs",
-              "DocumentMoniker": "C:\\Projetos\\TechChallengeFiap\\Store\\Infra\\PrepDB.cs",
-              "RelativeDocumentMoniker": "Infra\\PrepDB.cs",
-              "ToolTip": "C:\\Projetos\\TechChallengeFiap\\Store\\Infra\\PrepDB.cs",
-              "RelativeToolTip": "Infra\\PrepDB.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T00:51:47.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PaymentUseCase.cs",
-              "DocumentMoniker": "C:\\Projetos\\TechChallengeFiap\\Store\\Application\\UseCases\\PaymentUseCase.cs",
-              "RelativeDocumentMoniker": "Application\\UseCases\\PaymentUseCase.cs",
-              "ToolTip": "C:\\Projetos\\TechChallengeFiap\\Store\\Application\\UseCases\\PaymentUseCase.cs",
-              "RelativeToolTip": "Application\\UseCases\\PaymentUseCase.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAUwBwAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T00:50:14.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "OrderUseCase.cs",
-              "DocumentMoniker": "C:\\Projetos\\TechChallengeFiap\\Store\\Application\\UseCases\\OrderUseCase.cs",
-              "RelativeDocumentMoniker": "Application\\UseCases\\OrderUseCase.cs",
-              "ToolTip": "C:\\Projetos\\TechChallengeFiap\\Store\\Application\\UseCases\\OrderUseCase.cs",
-              "RelativeToolTip": "Application\\UseCases\\OrderUseCase.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBsAAAAsAAAA",
+              "DocumentMoniker": "C:\\Projetos\\TechChallengeFiap\\store\\src\\Application\\UseCases\\OrderUseCase.cs",
+              "RelativeDocumentMoniker": "src\\Application\\UseCases\\OrderUseCase.cs",
+              "ToolTip": "C:\\Projetos\\TechChallengeFiap\\store\\src\\Application\\UseCases\\OrderUseCase.cs",
+              "RelativeToolTip": "src\\Application\\UseCases\\OrderUseCase.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAA1wBoAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T00:39:19.176Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Projetos\\TechChallengeFiap\\Store\\API\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Projetos\\TechChallengeFiap\\Store\\API\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "API\\Controllers\\OrderController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-31T00:39:12.912Z",
+              "WhenOpened": "2024-08-02T01:40:33.772Z",
               "EditorCaption": ""
             }
           ]
