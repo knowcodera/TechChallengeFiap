@@ -15,7 +15,7 @@ Esboço
 ![Diagrama](https://github.com/user-attachments/assets/ae1f91fa-a3f2-42ea-a0db-ac90d75fb60f)
 
 ## Video
-
+https://youtu.be/JMTzKb7VZ8Q
 
 ## Funcionalidades
 
