@@ -11,7 +11,6 @@ Este é um sistema de pedidos de comida rápida desenvolvido em .NET8 utilizando
 
 ## Diagrama
 
-Esboço
 ![Diagrama](https://github.com/user-attachments/assets/ae1f91fa-a3f2-42ea-a0db-ac90d75fb60f)
 
 ## Video
