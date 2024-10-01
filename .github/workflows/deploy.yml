@@ -13,9 +13,9 @@ env:
   AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
   AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
   AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-  ACR_NAME: "mycontainerregistrytechchallenge"  # Nome do seu ACR
-  RESOURCE_GROUP: "MyResourceGroup"  # Nome do seu Resource Group no Azure
-  AKS_CLUSTER_NAME: "myAKSCluster"  # Nome do cluster AKS
+  ACR_NAME: ${{ secrets.AZURE_ACR_NAME }}
+  RESOURCE_GROUP: ${{ secrets.AZURE_RESOURCE_GROUP }}
+  AKS_CLUSTER_NAME: ${{ secrets.AZURE_AKS_CLUSTER_NAME }}
 
 jobs:
   build-and-deploy:
@@ -32,17 +32,25 @@ jobs:
 
     # Restore and Build Store API
     - name: Restore dependencies for Store API
-      run: dotnet restore ./store
+      run: |
+        dotnet restore ./store/src/API/API.csproj
+        dotnet restore ./store/src/Application/Application.csproj
+        dotnet restore ./store/src/Domain/Domain.csproj
+        dotnet restore ./store/src/Infra/Infra.csproj
 
     - name: Build Store API
-      run: dotnet build --configuration Release --no-restore ./store
+      run: |
+        dotnet build ./store/src/API/API.csproj --configuration Release --no-restore
+        dotnet build ./store/src/Application/Application.csproj --configuration Release --no-restore
+        dotnet build ./store/src/Domain/Domain.csproj --configuration Release --no-restore
+        dotnet build ./store/src/Infra/Infra.csproj --configuration Release --no-restore
 
     # Restore and Build Payment API
     - name: Restore dependencies for Payment API
-      run: dotnet restore ./payment
+      run: dotnet restore ./paymentsrc/API/PaymentWebhook.csproj
 
     - name: Build Payment API
-      run: dotnet build --configuration Release --no-restore ./payment
+      run: dotnet build ./paymentsrc/API/PaymentWebhook.csproj --configuration Release --no-restore
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
