@@ -92,13 +92,3 @@ jobs:
 
     - name: Get AKS credentials
       run: az aks get-credentials --resource-group ${{ env.RESOURCE_GROUP }} --name ${{ env.AKS_CLUSTER_NAME }}
-
-    - name: Deploy Store image to AKS
-      run: |
-        kubectl set image deployment/api api=${{ env.ACR_NAME }}.azurecr.io/store:dev
-        kubectl rollout status deployment/api --namespace default --timeout=30s
-
-    - name: Deploy Payment image to AKS
-      run: |
-        kubectl set image deployment/apipayment apipayment=${{ env.ACR_NAME }}.azurecr.io/payment:dev
-        kubectl rollout status deployment/apipayment --namespace default --timeout=30s
