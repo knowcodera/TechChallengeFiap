@@ -80,15 +80,3 @@ jobs:
         docker build -t ${{ env.ACR_NAME }}.azurecr.io/payment:dev ./payment
         docker push ${{ env.ACR_NAME }}.azurecr.io/payment:dev
 
-    - name: Azure Login
-      uses: azure/login@v2
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-    - name: Set up kubectl
-      uses: azure/setup-kubectl@v1
-      with:
-        version: 'latest'
-
-    - name: Get AKS credentials
-      run: az aks get-credentials --resource-group ${{ env.RESOURCE_GROUP }} --name ${{ env.AKS_CLUSTER_NAME }}
