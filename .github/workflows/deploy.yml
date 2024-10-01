@@ -16,6 +16,7 @@ env:
   ACR_NAME: ${{ secrets.AZURE_ACR_NAME }}
   RESOURCE_GROUP: ${{ secrets.AZURE_RESOURCE_GROUP }}
   AKS_CLUSTER_NAME: ${{ secrets.AZURE_AKS_CLUSTER_NAME }}
+  DefaultConnection: ${{ secrets.DB_CONNECTION_STRING }}
 
 jobs:
   build-and-deploy:
