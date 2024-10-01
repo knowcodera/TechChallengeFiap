@@ -54,7 +54,7 @@ jobs:
 
 
     - name: Clean Payment API
-      run: dotnet clean ./store/src/PaymentWebhook/PaymentWebhook.csproj
+      run: dotnet clean ./payment/src/API/PaymentWebhook.csproj
 
     # Restore and Build Payment API
     - name: Restore dependencies for Payment API
