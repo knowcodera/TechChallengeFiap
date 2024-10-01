@@ -30,6 +30,13 @@ jobs:
       with:
         dotnet-version: '8.0.x' 
 
+    - name: Clean Store API
+      run: |
+        dotnet clean ./store/src/API/API.csproj
+        dotnet clean ./store/src/Application/Application.csproj
+        dotnet clean ./store/src/Domain/Domain.csproj
+        dotnet clean ./store/src/Infra/Infra.csproj
+        
     # Restore and Build Store API
     - name: Restore dependencies for Store API
       run: |
@@ -44,6 +51,10 @@ jobs:
         dotnet build ./store/src/Application/Application.csproj --configuration Release --no-restore
         dotnet build ./store/src/Domain/Domain.csproj --configuration Release --no-restore
         dotnet build ./store/src/Infra/Infra.csproj --configuration Release --no-restore
+
+
+    - name: Clean Payment API
+      run: dotnet clean ./store/src/PaymentWebhook/PaymentWebhook.csproj
 
     # Restore and Build Payment API
     - name: Restore dependencies for Payment API
