@@ -96,9 +96,9 @@ jobs:
     - name: Deploy Store image to AKS
       run: |
         kubectl set image deployment/api api=${{ env.ACR_NAME }}.azurecr.io/store:dev
-        kubectl rollout status deployment/api --namespace default --timeout=300s
+        kubectl rollout status deployment/api --namespace default --timeout=30s
 
     - name: Deploy Payment image to AKS
       run: |
         kubectl set image deployment/apipayment apipayment=${{ env.ACR_NAME }}.azurecr.io/payment:dev
-        kubectl rollout status deployment/apipayment --namespace default --timeout=300s
+        kubectl rollout status deployment/apipayment --namespace default --timeout=30s
