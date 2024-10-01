@@ -47,10 +47,10 @@ jobs:
 
     # Restore and Build Payment API
     - name: Restore dependencies for Payment API
-      run: dotnet restore ./paymentsrc/API/PaymentWebhook.csproj
+      run: dotnet restore ./payment/src/API/PaymentWebhook.csproj
 
     - name: Build Payment API
-      run: dotnet build ./paymentsrc/API/PaymentWebhook.csproj --configuration Release --no-restore
+      run: dotnet build ./payment/src/API/PaymentWebhook.csproj --configuration Release --no-restore
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
