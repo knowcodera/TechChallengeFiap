@@ -1,0 +1,87 @@
+name: Build and Deploy Store and Payment to Azure AKS
+
+on:
+  push:
+    branches:
+      - main  # O pipeline será acionado quando houver push na branch 'main'
+  pull_request:
+    branches:
+      - main
+
+env:
+  AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+  AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+  AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+  AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+  ACR_NAME: "mycontainerregistrytechchallenge"  # Nome do seu ACR
+  RESOURCE_GROUP: "MyResourceGroup"  # Nome do seu Resource Group no Azure
+  AKS_CLUSTER_NAME: "myAKSCluster"  # Nome do cluster AKS
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up .NET Core
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '6.0.x'  # Versão do .NET
+
+    # Restore and Build Store API
+    - name: Restore dependencies for Store API
+      run: dotnet restore ./store
+
+    - name: Build Store API
+      run: dotnet build --configuration Release --no-restore ./store
+
+    # Restore and Build Payment API
+    - name: Restore dependencies for Payment API
+      run: dotnet restore ./payment
+
+    - name: Build Payment API
+      run: dotnet build --configuration Release --no-restore ./payment
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Log in to Azure Container Registry (ACR)
+      run: |
+        echo ${{ secrets.AZURE_CLIENT_SECRET }} | docker login ${{ env.ACR_NAME }}.azurecr.io --username ${{ secrets.AZURE_CLIENT_ID }} --password-stdin
+
+    - name: Build and Push Docker image for Store
+      run: |
+        docker build -t ${{ env.ACR_NAME }}.azurecr.io/store:dev ./store
+        docker push ${{ env.ACR_NAME }}.azurecr.io/store:dev
+
+    - name: Build and Push Docker image for Payment
+      run: |
+        docker build -t ${{ env.ACR_NAME }}.azurecr.io/payment:dev ./payment
+        docker push ${{ env.ACR_NAME }}.azurecr.io/payment:dev
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        client-id: ${{ secrets.AZURE_CLIENT_ID }}
+        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+    - name: Set up kubectl
+      uses: azure/setup-kubectl@v1
+      with:
+        version: 'latest'
+
+    - name: Get AKS credentials
+      run: az aks get-credentials --resource-group ${{ env.RESOURCE_GROUP }} --name ${{ env.AKS_CLUSTER_NAME }}
+
+    - name: Deploy Store image to AKS
+      run: |
+        kubectl set image deployment/store-api store-api=${{ env.ACR_NAME }}.azurecr.io/store:dev
+        kubectl rollout status deployment/store-api
+
+    - name: Deploy Payment image to AKS
+      run: |
+        kubectl set image deployment/payment-api payment-api=${{ env.ACR_NAME }}.azurecr.io/payment:dev
+        kubectl rollout status deployment/payment-api
