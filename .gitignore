@@ -110,3 +110,23 @@ $RECYCLE.BIN/
 # Others
 **/bin/
 **/obj/
+
+# Ignorar arquivos e diretórios gerados pelo Visual Studio
+.vs/
+**/.vs/
+.vscode/
+.vscode/**
+
+# Ignorar arquivos temporários e de índice
+store/.vs/
+store/.vs/**
+**/*.vsdx
+**/*.backup.json
+**/*.json
+**/*.db-shm
+**/*.db-wal
+**/*.db
+
+# Copilot Indices (caso esteja ativado)
+**/CopilotIndices/
+

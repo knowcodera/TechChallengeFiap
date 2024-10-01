@@ -19,7 +19,9 @@ var port = builder.Configuration["DBPort"] ?? "1433";
 var user = builder.Configuration["DBUser"] ?? "SA";
 var password = builder.Configuration["DBPassword"] ?? "PA55w0rd2024";
 var database = builder.Configuration["Database"] ?? "Fiap";
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+var connectionString = Environment.GetEnvironmentVariable("DefaultConnection")
+                       ?? builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
