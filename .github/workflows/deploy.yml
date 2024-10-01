@@ -95,10 +95,10 @@ jobs:
 
     - name: Deploy Store image to AKS
       run: |
-        kubectl set image deployment/store-api store-api=${{ env.ACR_NAME }}.azurecr.io/store:dev
-        kubectl rollout status deployment/store-api
+        kubectl set image deployment/api api=${{ env.ACR_NAME }}.azurecr.io/store:dev
+        kubectl rollout status deployment/api
 
     - name: Deploy Payment image to AKS
       run: |
-        kubectl set image deployment/payment-api payment-api=${{ env.ACR_NAME }}.azurecr.io/payment:dev
-        kubectl rollout status deployment/payment-api
+        kubectl set image deployment/apipayment apipayment=${{ env.ACR_NAME }}.azurecr.io/payment:dev
+        kubectl rollout status deployment/apipayment
