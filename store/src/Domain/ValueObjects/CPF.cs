@@ -6,8 +6,10 @@
         {
 
             if (!Validate(value))
-                throw new ArgumentException("CPF Invalido");
-
+            {
+                Value = "CPF Invalido";
+            }
+                
             Value = value;
         }
 
