@@ -1,5 +1,6 @@
 
 
+using Application.Interfaces;
 using Application.Mappings;
 using Application.UseCases;
 using Domain.Interfaces;
@@ -18,8 +19,11 @@ var port = builder.Configuration["DBPort"] ?? "1433";
 var user = builder.Configuration["DBUser"] ?? "SA";
 var password = builder.Configuration["DBPassword"] ?? "PA55w0rd2024";
 var database = builder.Configuration["Database"] ?? "Fiap";
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer($"Server={server},{port};Initial Catalog={database};User ID={user};Password={password};TrustServerCertificate=true"));
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -53,6 +57,13 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 var app = builder.Build();
+
+using(var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<ApplicationDbContext>();
+    context.Database.Migrate();
+}
 
 app.UseSwagger();
 app.UseSwaggerUI();

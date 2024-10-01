@@ -1,5 +1,6 @@
-﻿using AutoMapper;
-using Domain.Dtos;
+﻿using Application.Dtos;
+using Application.Interfaces;
+using AutoMapper;
 using Domain.Entities;
 using Domain.Enum;
 using Domain.Interfaces;
@@ -63,6 +64,13 @@ namespace Application.UseCases
         public IEnumerable<ResponseOrderDto> GetAllOrders()
         {
             var orders = _orderRepository.GetAll();
+
+            var filteredOrders = orders
+                .Where(o => o.Status != OrderStatus.Finalizado) 
+                .OrderBy(o => o.Status == OrderStatus.Pronto ? 1 :
+                              o.Status == OrderStatus.EmPreparacao ? 2 : 3)  
+                .ThenBy(o => o.CreatedAt);  
+
             return _mapper.Map<IEnumerable<ResponseOrderDto>>(orders);
         }
 

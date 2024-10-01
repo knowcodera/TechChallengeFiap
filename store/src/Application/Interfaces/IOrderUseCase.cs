@@ -1,7 +1,7 @@
-﻿using Domain.Dtos;
+﻿using Application.Dtos;
 using Domain.Enum;
 
-namespace Domain.Interfaces
+namespace Application.Interfaces
 {
     public interface IOrderUseCase
     {

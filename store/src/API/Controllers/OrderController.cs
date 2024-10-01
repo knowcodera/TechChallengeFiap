@@ -1,6 +1,6 @@
-﻿using Domain.Dtos;
+﻿using Application.Dtos;
+using Application.Interfaces;
 using Domain.Enum;
-using Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers

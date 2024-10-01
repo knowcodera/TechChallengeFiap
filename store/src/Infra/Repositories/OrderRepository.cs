@@ -41,7 +41,8 @@ namespace Infra.Repositories
         {
             return _context.Orders
                 .Include(o => o.Items).ThenInclude(i => i.Product)
-                .Include(o => o.Payments).ToList();
+                .Include(o => o.Payments)
+                .ToList();
         }
 
         public void SaveChanges()

@@ -12,20 +12,37 @@ spec:
       labels:
         app: api
     spec:
+      imagePullSecrets:
+      - name: acr-secret
       containers:
       - name: api
-        image: store:dev
+        image: mycontainerregistrytechchallenge.azurecr.io/store:dev
         env:
         - name: DBServer
-          value: sqlserver
+          valueFrom:
+            configMapKeyRef:
+              name: api-config
+              key: DBServer
         - name: DBPort
-          value: "1433"
-        - name: DBUser
-          value: SA
-        - name: DBPassword
-          value: PA55w0rd2024
+          valueFrom:
+            configMapKeyRef:
+              name: api-config
+              key: DBPort
         - name: Database
-          value: Fiap
+          valueFrom:
+            configMapKeyRef:
+              name: api-config
+              key: Database
+        - name: DBUser
+          valueFrom:
+            secretKeyRef:
+              name: api-secrets  
+              key: DBUser
+        - name: DBPassword
+          valueFrom:
+            secretKeyRef:
+              name: api-secrets
+              key: DBPassword
         ports:
         - containerPort: 8080
         - containerPort: 8081

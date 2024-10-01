@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Domain.Dtos
+namespace Application.Dtos
 {
     public class RequestClientDto
     {

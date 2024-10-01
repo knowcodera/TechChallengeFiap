@@ -1,6 +1,6 @@
-﻿using Domain.Dtos;
+﻿using Application.Dtos;
 
-namespace Domain.Interfaces
+namespace Application.Interfaces
 {
     public interface IPaymentUseCase
     {

@@ -12,9 +12,11 @@ spec:
       labels:
         app: apipayment
     spec:
+      imagePullSecrets:
+      - name: acr-secret
       containers:
       - name: apipayment
-        image: payment:dev
+        image: mycontainerregistrytechchallenge.azurecr.io/payment:dev
         ports:
         - containerPort: 8480
         - containerPort: 8481
